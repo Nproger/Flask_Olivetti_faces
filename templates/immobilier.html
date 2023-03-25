@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<!-- Projects Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <h1> MODULE 4 : IMMOBILIER(LOCANTO) </h1>
+        <h2> Yaounde(Olembe) et Douala(Bepanda)</h2>
+        <div class="row wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-12 text-center">
+                <table class="table_center">
+                    {% for lign in lignes %}
+                    {{lign|safe}}
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Projects End -->
+{% endblock %}

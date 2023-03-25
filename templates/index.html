@@ -1,0 +1,136 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Bienvenue dans l'application Web pour la classification des images</h1>
+      <h2>il sagit d'une application de classification des images du dataset </h2>
+      
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="static/img/genetique1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Application Web de classification des images </h3>
+            <p class=" h3 fst-italic">
+           L'application est en effet constitué d’une base de données de olive dataset 
+            </p>
+             
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Students</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Courses</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Events</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Trainers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+    <br>
+     
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 mb-6>Liste des atlas organism part</h2>
+          <p>atlas organism part</p>
+        </div>
+
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          {% for exp1 in exp %}
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+              <h3><a href="/parts/{{exp1}}/genes/">{{ exp1 }}</a></h3>
+            </div>
+          </div>
+          {% endfor %}
+        
+        
+        
+        
+        
+        </div>
+
+
+      </div>
+    </section><!-- End Popular Courses Section -->
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2 mb-6>Liste des Genes</h2>
+          <p>Genes List</p>
+        </div>
+    
+    
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        {% for transcript in transcripts %}
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+              <h3><a href="/genes/{{transcript}}">{{ transcript }}</a></h3>
+            </div>
+          </div>
+          {% endfor %}
+    
+    
+    
+    
+    
+        </div>
+    
+    
+      </div>
+    </section><!-- End Popular Courses Section -->
+
+
+     
+
+  
+     
+
+  </main><!-- End #main -->
+
+  {% endblock %}

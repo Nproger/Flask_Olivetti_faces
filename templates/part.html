@@ -1,0 +1,56 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <h1><b> MODULE 3: GENES <b></h1>
+        <h2> Information sur la <b>Gene</b> de l'identifiant : {{ gid }}</h2>
+        <table class="center">
+
+            
+                {% for lign in lignes1 %}
+                {{lign|safe}}
+                {% endfor %}
+            
+
+        </table>
+        <h2> Information sur le <b>Transcript</b> de l'identifiant : {{ gid }} </h2>
+        <table class="center">
+
+             
+                {% for lign in lignes2 %}
+                {{lign|safe}}
+                {% endfor %}
+            
+
+        </table>
+
+        <h2> Information sur le <b>ParalogsHuman</b> de l'identifiant : {{ gid }}</h2>
+        <table class="center">
+
+             
+                {% for lign in lignes3 %}
+                {{lign|safe}}
+                {% endfor %}
+            
+        </table>
+
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Facts Start -->
+<div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                <h1 class="display-4 text-white" data-toggle="counter-up">{{ gid }}</h1>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Facts End -->
+{% endblock %}
